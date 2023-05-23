@@ -31,12 +31,16 @@
             Text="Авторизация" 
             FontFamily="Arial Black"
             />
-                <Button Height="30"
-                        Width="30"
+                <Button Height="25"
+                        Width="25"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
-                        Margin="5"
-                    />
+                        Margin="5" 
+                        BorderBrush="{x:Null}" 
+                        Foreground="{x:Null}"
+                    >
+                    
+                </Button>
             </Grid>
         </Border>
 
@@ -74,7 +78,7 @@
                     VerticalAlignment="Top" 
                     FontSize="16" 
             >
-                   
+
                 </TextBox>
 
                 <TextBlock 
@@ -103,8 +107,8 @@
 
             </Grid>
 
-                
-            
+
+
         </Border>
 
         <!--<TextBlock 
@@ -126,7 +130,7 @@
             /> -->
 
         <!--Password Input -->
-        
+
         <!--<TextBlock 
             Grid.Row="1" 
             Margin="30,90,0,0" 
@@ -165,7 +169,7 @@
                     Background="#FF4BA7F7"
                     FontSize="15" 
                     BorderBrush="{x:Null}">
-                    
+
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -179,15 +183,15 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     FontSize="15"
-                    Margin="0 0 0 5"
+                    Margin="0 0 0 4"
                     />
-            
+
             </Grid>
 
-                
+
         </Border>
 
-            <!--<Button 
+        <!--<Button 
             Grid.Row="2" 
             Margin="0,0,0,10" 
             HorizontalAlignment="Center" 
@@ -213,5 +217,5 @@
             
         </Button>-->
     </Grid>
-        
+
 </Window>

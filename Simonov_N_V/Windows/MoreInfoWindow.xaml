@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+               
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -30,13 +30,143 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.ColumnSpan="2"
+            <TextBlock Grid.Column="1"
+                Grid.ColumnSpan="2"
                        Text="Иван Иванов Иваныч"
                        FontSize="30"
                        Margin="10 0 0 0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left" 
                        FontWeight="Bold" 
+                />
+
+            <TextBlock
+                Grid.Row="2"
+                Text="Адрес электронной почты"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="2"
+                Text="i.ivanov@gmail.com"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Должность"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Инженер"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="Мобильный телефон"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="+7(800)555-35-35"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="День рождения"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="07.07.2002"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Опыт работы"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="10 год/лет"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Отдел"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="6"
+                FontSize="12"
+                />
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Отдел инженерной геодезии («красных линий»)"
+                TextWrapping="Wrap"
+                FontSize="12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6 0 0 0"     
+                />
+
+            <Image Grid.RowSpan="2"
+                Source="/Images/Worker.jpg" 
                 />
 
         </Grid>

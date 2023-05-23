@@ -9,6 +9,103 @@
       Title="WorkerPage">
 
     <Grid>
-        
+        <ListView
+            x:Name="AllWorker"
+            Background="Transparent"
+            Foreground="White"
+            FontSize="25"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border 
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                CornerRadius="10"
+                Width="580"
+                Height="200"
+                Margin="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.RowSpan="2"
+                    Source="/Images/test1.png"
+                       Width="130"
+                       />
+
+                            <TextBlock Grid.Column="1"
+                           Text="Иванов Иван Иваныч"
+                           FontSize="23"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Margin="10"
+                    />
+
+                            <TextBlock Grid.Row="0"
+                           Grid.Column="1"
+                           Text="Должность:"
+                           VerticalAlignment="Center"
+                           Margin="10 26 0 0"
+                           FontSize="18"
+                           HorizontalAlignment="Left"
+                    />
+
+                            <TextBlock Grid.Column="1"
+                           Grid.RowSpan="2"
+                           Text="Менеджер"
+                           FontSize="15"
+                           Margin="10 0 0 10"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                    />
+
+                            <TextBlock Text="+7(909)343-34-43"
+                           FontSize="23"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="10 0 0 20"
+                    />
+
+                            <Button Content="Подробнее"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Height="50"
+                        Width="150"
+                        FontSize="23"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom" 
+                        BorderBrush="{x:Null}" 
+                        Background="{x:Null}"
+                    />
+
+                        </Grid>
+
+                    </Border>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#324AB2" />
+                </Style>
+            </ListView.Resources>
+        </ListView>
     </Grid>
 </Page>

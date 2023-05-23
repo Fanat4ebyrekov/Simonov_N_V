@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simonov_N_V.Windows"
         mc:Ignorable="d"
-        Height="450" 
+        Height="470" 
         Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         >
     <Grid>
         <Grid.ColumnDefinitions>
@@ -34,20 +36,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image 
+                <!--<Image 
                     Grid.Column="2"
                     Source="/Images/test1.png"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Margin="10 0 0 0"
-                    Width="50"
-                   >
-                    <Image.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="50"/>
-                        </Style>
-                    </Image.Resources>
-                </Image>
+                    Width="50"/>-->
 
                 <TextBlock
                     Grid.Column="2"
@@ -100,13 +95,14 @@
                     Height="50"
                     Width="150"
                     >
-                    <TextBlock 
+                    <Button 
                         Grid.Row="0"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="23"
-                        Text="Сотрудники" Foreground="White"
+                        Content="Сотрудники" 
+                        Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"
                     />
                 </Border>
 
@@ -118,13 +114,14 @@
                     Height="50"
                     Width="150"
                     >
-                    <TextBlock 
+                    <Button 
                         Grid.Row="0"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="23"
-                        Text="Резюме" Foreground="White"
+                        Content="Резюме" 
+                        Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"
                     />
                 </Border>
 
@@ -155,104 +152,8 @@
             Grid.Column="1"
             Grid.RowSpan="4"
             Grid.ColumnSpan="2">
-            <ListView
-            x:Name="AllClient"
-            Background="Transparent"
-            Foreground="White"
-            FontSize="25"
-            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-            d:ItemsSource="{d:SampleData ItemCount=5}"
-            >
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Border 
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                CornerRadius="10"
-                Width="580"
-                Height="200"
-                Margin="10">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="3*"/>
-
-                                </Grid.ColumnDefinitions>
-
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-
-                                <Image Grid.RowSpan="2"
-                    Source="/Images/test1.png"
-                       Width="130"
-                       />
-
-                                <TextBlock Grid.Column="1"
-                           Text="Иванов Иван Иваныч"
-                           FontSize="23"
-                           VerticalAlignment="Top"
-                           HorizontalAlignment="Left"
-                           Margin="10"
-                    />
-
-                                <TextBlock Grid.Row="0"
-                           Grid.Column="1"
-                           Text="Должность:"
-                           VerticalAlignment="Center"
-                           Margin="10 26 0 0"
-                           FontSize="18"
-                           HorizontalAlignment="Left"
-                    />
-
-                                <TextBlock Grid.Column="1"
-                           Grid.RowSpan="2"
-                           Text="Менеджер"
-                           FontSize="15"
-                           Margin="10 0 0 10"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                    />
-
-                                <TextBlock Text="+7(909)343-34-43"
-                           FontSize="23"
-                           Grid.Column="1"
-                           Grid.Row="1"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Margin="10 0 0 20"
-                    />
-
-                                <Button Content="Подробнее"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Height="50"
-                        Width="150"
-                        FontSize="23"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom" 
-                        BorderBrush="{x:Null}" 
-                        Background="{x:Null}"
-                    />
-
-                            </Grid>
-
-                        </Border>
-
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.Resources>
-                    <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
-                        <Setter Property="Background" Value="#324AB2" />
-                    </Style>
-                </ListView.Resources>
-            </ListView>
+            <Frame x:Name="AllInformation"
+                />
         </Grid>
         
         
